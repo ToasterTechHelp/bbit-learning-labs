@@ -2,7 +2,9 @@
 import pika
 import os
 
-class mqProducer:
+from producer_interface import mqProducerInterface
+
+class mqProducer(mqProducerInterface):
     def __init__(self, routing_key: str, exchange_name: str) -> None:
         # Save parameters to class variables
         self.routing_key = routing_key
